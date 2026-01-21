@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@tailwind utilities;
+
+@theme inline {
+  --size-icon: 1.125rem;
+  --text-semiwhite: #e2e2e2;
+}

@@ -1,3 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "tailwindcss";
+@import 'tailwindcss';
+@tailwind utilities;
+
+@theme inline {
+  --size-icon: 10rem;
+  --color-semiwhite: #e2e2e2;
+  --color-background: #1a1a1a;
+  --color-mycard: #0d0d0d;
+}
