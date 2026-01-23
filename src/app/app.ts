@@ -23,7 +23,7 @@ export class App {
     const scrollTop =
       window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    this.showBackToTop = scrollTop > 1520;
+    this.showBackToTop = scrollTop > 1490;
   }
 
   scrollToTop(): void {

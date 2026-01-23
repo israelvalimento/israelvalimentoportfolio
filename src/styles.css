@@ -3,9 +3,24 @@
 @import 'tailwindcss';
 @tailwind utilities;
 
-@theme inline {
-  --size-icon: 10rem;
-  --color-semiwhite: #e2e2e2;
+:root {
+  --size-icon: 8rem;
+  --color-semiwhite: #dbd9d9;
   --color-background: #1a1a1a;
   --color-mycard: #0d0d0d;
+  --color-bordercard: #e2e2e2;
+}
+
+@theme inline {
+  --size-icon: var(--size-icon);
+  --color-semiwhite: var(--color-semiwhite);
+  --color-bordercard: var(--color-bordercard);
+  --color-background: var(--color-background);
+  --color-mycard: var(--color-mycard);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

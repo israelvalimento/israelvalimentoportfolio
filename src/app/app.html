@@ -1,7 +1,9 @@
 <main class="max-w-4xl mx-auto w-screen h-screen px-4 py-8 scroll-smooth">
   <!-- user Section -->
 
-  <section class="mb-5">
+  <section
+    class="mb-5 fade-in opacity-0 animate-[fadeIn_1s_ease-out_forwards] [animation-delay:0ms]"
+  >
     <!-- user container  -->
     <div class="flex gap-4 md:gap-5">
       <!-- user image  -->
@@ -31,16 +33,23 @@
     </div>
   </section>
 
-  <div class="grid gap-3 md:grid-cols-[250px] md:grid-rows-[340px,240px,240px]">
-    <my-about class="md:col-start-2 w-full"></my-about>
-    <my-experience class="md:col-start-1 md:row-start-1 md:row-span-2"></my-experience>
+  <!-- components -->
+  <div
+    class="grid gap-3 md:grid-cols-[240px] md:grid-rows-[340px,240px,240px] opacity-0 animate-[fadeIn_1s_ease-out_forwards] [animation-delay:300ms]"
+  >
+    <div class="md:col-start-2 w-full h-full">
+      <my-about class=""></my-about>
+    </div>
+    <div class="md:col-start-1 md:row-start-1 md:row-span-2 h-full w-full">
+      <my-experience></my-experience>
+    </div>
     <my-techstack class="md:row-start-2"></my-techstack>
     <my-project class="md:row-start-3 md:col-span-2"></my-project>
   </div>
 
   <section
     id="mycard"
-    class="h-screen snap-end flex flex-col items-center justify-center relative px-5 py-4"
+    class="h-screen snap-end flex flex-col items-center justify-center relative px-5 py-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards] [animation-delay:400ms]"
   >
     <div class="flex gap-1.5 top-92 pb-3 max-w-94 w-full animate-pulse duration-250 ease-in-out">
       <p class="text-semiwhite hidden lg:block text-lg font-semibold">Hover the card</p>
@@ -111,14 +120,14 @@
     </div>
   </section>
 
-  <a
+  <button
     (click)="scrollToTop()"
     [ngClass]="showBackToTop ? 'block' : 'hidden'"
     href=""
     class="fixed bottom-6 right-6 px-4 py-2 rounded-full bg-mycard text-semiwhite text-sm hover:bg-gray-700 duration-300 transition"
   >
     ↑ Back to top
-  </a>
+  </button>
 </main>
 
 <router-outlet></router-outlet>
